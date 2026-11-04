@@ -8,6 +8,8 @@ Chào mừng bạn đến với tài liệu kỹ thuật chính thức của đ�
 
 Đồ án tập trung vào việc nghiên cứu, thiết kế và hiện thực hóa một quy trình (pipeline) hoàn chỉnh, có khả năng tái lập cao nhằm thu thập, chuẩn hóa và liên kết dữ liệu bài báo khoa học từ các nguồn học thuật hàng đầu thế giới: **arXiv**, **OAI-PMH**, và **Semantic Scholar**.
 
+Quy mô thực nghiệm của đồ án được triển khai trên **25.000 bài báo khoa học** duy nhất (mỗi thành viên trong nhóm 5 người đảm nhiệm thu thập độc lập 5.000 bài theo dải định danh MSSV được phân công, đảm bảo tính phân tán và không trùng lặp).
+
 Quy trình được chia thành 3 giai đoạn chính:
 
 1. **Giai đoạn 1 — Thu thập Dữ liệu và Đo lường Hiệu năng:**
@@ -41,7 +43,7 @@ Tài liệu được biên soạn dưới dạng sách tương tác (Jupyter Boo
 
 - **Giai đoạn 1 — Thu thập Dữ liệu:**
   - [01. Phương pháp thu thập dữ liệu](milestone1/01-methodology.ipynb): Khảo sát chi tiết 4 nguồn dữ liệu (arXiv API, OAI-PMH, Kaggle, Semantic Scholar), phân tích giới hạn tốc độ (rate limits), giải thuật retry với exponential backoff, và quy tắc chuẩn hóa schema.
-  - [02. Báo cáo thống kê dữ liệu thực nghiệm](milestone1/02-statistics.ipynb): Báo cáo thực nghiệm phân tích 4 chỉ số tài nguyên (Thời gian, Bộ nhớ đỉnh, Bộ nhớ trung bình, Dung lượng đĩa), phân loại lỗi tải chi tiết và đối sánh chéo 10.000 bài báo.
+  - [02. Báo cáo thống kê dữ liệu thực nghiệm](milestone1/02-statistics.ipynb): Báo cáo thực nghiệm phân tích 4 chỉ số tài nguyên (Thời gian, Bộ nhớ đỉnh, Bộ nhớ trung bình, Dung lượng đĩa), phân loại lỗi tải chi tiết trên 5.000 bài và đối sánh chéo trích dẫn 10.000 bài báo (giữa 2 tập dữ liệu của Tuấn và Duy trên tổng quy mô 25.000 bài của cả nhóm).
   - [03. Phân tích hiệu năng chuyên sâu và kiểm định](milestone1/03-performance.ipynb): Đo lường Peak RAM qua Kernel POSIX (getrusage), tối ưu streaming (Minh Thư - A1), bộ kiểm định dữ liệu (Thanh Tú - A2), đối sánh chéo 3 nguồn metadata & khảo sát Resumption Token (Ngọc Hoàng - A3), và tiền xử lý cấu trúc TeX & trích dẫn (Hửu Duy - C).
 - **Giai đoạn 2 — Bóc tách Dữ liệu:**
   - [Dành riêng cho Giai đoạn 2](milestone2/reserved.md): Phân hệ bóc tách mã nguồn TeX và chuẩn hóa dữ liệu (sẽ được cập nhật khi bắt đầu giai đoạn 2).
