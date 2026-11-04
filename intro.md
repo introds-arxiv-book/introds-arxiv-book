@@ -13,7 +13,7 @@ Quy mô thực nghiệm của đồ án được triển khai trên **25.000 bà
 Quy trình được chia thành 3 giai đoạn chính:
 
 1. **Giai đoạn 1 — Thu thập Dữ liệu và Đo lường Hiệu năng:**
-   - Thu thập có kiểm soát siêu dữ liệu (metadata) và mã nguồn TeX từ arXiv (tuân thủ nghiêm ngặt giới hạn tốc độ $\\ge 3$ giây).
+   - Thu thập có kiểm soát siêu dữ liệu (metadata) và mã nguồn TeX từ arXiv (tuân thủ nghiêm ngặt giới hạn tốc độ tối thiểu 3 giây (≥ 3.0s)).
    - Khai thác đồ thị trích dẫn từ Semantic Scholar API.
    - Xây dựng hạ tầng đo lường hiệu năng hệ thống (Thời gian thực thi, Bộ nhớ đỉnh, Bộ nhớ trung bình, Dung lượng đĩa) và phát hành tài liệu tương tác qua Jupyter Book.
 2. **Giai đoạn 2 — Bóc tách Cấu trúc Tài liệu và Chuẩn hóa Dữ liệu (Sắp triển khai):**
