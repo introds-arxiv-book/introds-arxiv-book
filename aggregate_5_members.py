@@ -143,7 +143,10 @@ def per_member_table(g):
 
         rf = g["references"]
         rf = rf[rf.member == member] if "member" in rf.columns else rf.iloc[0:0]
-        rfo = rf[rf.status.isin(["ok", "skipped"])] if len(rf) else rf
+        if len(rf) and "arxiv_id" in rf.columns:
+            rf = rf[~rf.arxiv_id.str.startswith("batch:")]
+        rff = dedup_final(rf, ["arxiv_id"])
+        rfo = rff[rff.status.isin(["ok", "skipped"])] if len(rff) else rff
         r["Bài có reference"] = rfo.arxiv_id.nunique() if len(rfo) else 0
         if len(rfo) and "n_total" in rfo.columns:
             nt = pd.to_numeric(rfo.n_total, errors="coerce")
@@ -165,7 +168,10 @@ def group_totals(g):
     exf = dedup_final(g["extract"], ["arxiv_id", "version"])
     exo = exf[exf.status == "ok"] if len(exf) else exf
     rf = g["references"]
-    rfo = rf[rf.status.isin(["ok", "skipped"])] if len(rf) else rf
+    if len(rf) and "arxiv_id" in rf.columns:
+        rf = rf[~rf.arxiv_id.str.startswith("batch:")]
+    rff = dedup_final(rf, ["member", "arxiv_id"])
+    rfo = rff[rff.status.isin(["ok", "skipped"])] if len(rff) else rff
 
     before = pd.to_numeric(exo.get("bytes_before"), errors="coerce").sum() if len(exo) else 0
     after = pd.to_numeric(exo.get("bytes_after"), errors="coerce").sum() if len(exo) else 0
