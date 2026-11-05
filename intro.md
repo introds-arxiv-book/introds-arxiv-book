@@ -43,7 +43,7 @@ Tài liệu được biên soạn dưới dạng sách tương tác (Jupyter Boo
 
 - **Giai đoạn 1 — Thu thập Dữ liệu:**
   - [01. Phương pháp thu thập dữ liệu](milestone1/01-methodology.ipynb): Khảo sát chi tiết 4 nguồn dữ liệu (arXiv API, OAI-PMH, Kaggle, Semantic Scholar), phân tích giới hạn tốc độ (rate limits), giải thuật retry với exponential backoff, và quy tắc chuẩn hóa schema.
-  - [02. Báo cáo thống kê dữ liệu thực nghiệm](milestone1/02-statistics.ipynb): Báo cáo thực nghiệm phân tích 4 chỉ số tài nguyên (Thời gian, Bộ nhớ đỉnh, Bộ nhớ trung bình, Dung lượng đĩa), phân loại lỗi tải chi tiết trên 5.000 bài và đối sánh chéo trích dẫn 10.000 bài báo (giữa 2 tập dữ liệu của Tuấn và Duy trên tổng quy mô 25.000 bài của cả nhóm).
+  - [02. Báo cáo thống kê dữ liệu thực nghiệm](milestone1/02-statistics.ipynb): Báo cáo thực nghiệm phân tích 4 chỉ số tài nguyên (Thời gian, Bộ nhớ đỉnh, Bộ nhớ trung bình, Dung lượng đĩa), bảng tổng hợp 11 chỉ số bắt buộc song song giữa cá nhân (5.000 bài) và toàn nhóm (25.000 bài), đánh giá tính nhất quán của pipeline trên 5 dải dữ liệu độc lập, và phân loại lỗi tải chi tiết.
   - [03. Phân tích hiệu năng chuyên sâu và kiểm định](milestone1/03-performance.ipynb): Đo lường Peak RAM qua Kernel POSIX (getrusage), tối ưu streaming (Minh Thư - A1), bộ kiểm định dữ liệu (Thanh Tú - A2), đối sánh chéo 3 nguồn metadata & khảo sát Resumption Token (Ngọc Hoàng - A3), và tiền xử lý cấu trúc TeX & trích dẫn (Hửu Duy - C).
 - **Giai đoạn 2 — Bóc tách Dữ liệu:**
   - [Dành riêng cho Giai đoạn 2](milestone2/reserved.md): Phân hệ bóc tách mã nguồn TeX và chuẩn hóa dữ liệu (sẽ được cập nhật khi bắt đầu giai đoạn 2).
