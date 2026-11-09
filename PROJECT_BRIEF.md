@@ -71,16 +71,16 @@ Toàn bộ đồ án xử lý kho dữ liệu **25.000 bài báo khoa học** tr
   - Nạp trọn vẹn 2 bảng thẩm định chéo A3 trong `data/`: [a3_field_agreement.csv](file:///d:/introds-arxiv-book/data/a3_field_agreement.csv) và [a3_api_recheck.csv](file:///d:/introds-arxiv-book/data/a3_api_recheck.csv) vào [03-performance.ipynb](file:///d:/introds-arxiv-book/milestone1/03-performance.ipynb).
   - Viết thuyết minh khoa học chuyên sâu về ma trận đồng thuận metadata (API vs OAI, API vs Kaggle, OAI vs Kaggle), tác động của chuẩn hóa nâng cao và hiện tượng trễ cập nhật metadata (Snapshot Synchronization Lag & Journal Reference Propagation Delay).
   - Re-execute notebook thành công với exit code 0.
-- [ ] **11/11 (Thứ 4) — VIỆC TIẾP THEO ⏳:**
-  - Xây dựng notebook mới `milestone1/04-deep-analysis.ipynb` gồm 6 phân tích chuyên sâu:
-    1. Phân bố số version mỗi bài (`discovery.csv` cột `n_versions` $\rightarrow$ tiền đề dedup M2).
-    2. Phân bố số file `.tex` mỗi version (`duy2_prescan_versions.csv` $\rightarrow$ độ khó multi-file).
-    3. Tỉ lệ version có `.bib` riêng vs `\bibitem` inline (minh chứng khối lượng bóc tách của Duy).
-    4. Tỉ lệ reference có arXiv ID (matching pool ~490k ứng viên cho M3).
-    5. Phân loại lỗi crawl chi tiết.
-    6. Timeline request vs rate limit arXiv.
-  - Cập nhật [D:\introds-arxiv-book\_toc.yml](file:///d:/introds-arxiv-book/_toc.yml) đưa `04-deep-analysis` vào part "Giai đoạn 1".
-- [ ] **12/11 (Thứ 5):**
+- [x] **11/11 (Thứ 4) — ĐÃ XONG ✅:**
+  - Xây dựng hoàn chỉnh notebook mới [milestone1/04-deep-analysis.ipynb](file:///d:/introds-arxiv-book/milestone1/04-deep-analysis.ipynb) gồm 6 phân tích chuyên sâu (20 cells, re-execute sạch 100% không cảnh báo, không lỗi):
+    1. Phân bố số version mỗi bài (14.623 bài v1 vs 10.377 bài $\ge 2$ versions $\rightarrow$ chứng minh định lượng tính sống còn của deduplication M2).
+    2. Phân bố số file `.tex` mỗi version (37.61% version TeX là đa tệp, max 134 files $\rightarrow$ chứng minh vai trò đệ quy của hàm `gather()` Thư).
+    3. Tỉ lệ version có `.bib` riêng vs `\bibitem` inline (17.24% version cần parse regex; phát hiện 124 version `both` làm Bộ chuẩn vàng tự nhiên).
+    4. Tỉ lệ reference có arXiv ID (1.053.692 refs, 490.314 có arXiv ID $\rightarrow$ đạt mật độ 46.53%, thiết lập Matching Pool cho M3).
+    5. Phân loại lỗi crawl chi tiết (Phân định rạch ròi giữa 2.710 ca `pdf_only` bản chất dữ liệu và các lỗi mạng tạm thời được hồi phục 100%).
+    6. Timeline request vs rate limit arXiv (Phân rã 33.64 giờ chờ pacing $\ge 3.0$s tuân thủ chính sách arXiv Etiquette).
+  - Cập nhật [D:\introds-arxiv-book\_toc.yml](file:///d:/introds-arxiv-book/_toc.yml) đưa `04-deep-analysis` vào part "Giai đoạn 1 — Thu thập Dữ liệu".
+- [ ] **12/11 (Thứ 5) — VIỆC TIẾP THEO ⏳:**
   - Cấu hình CDN `require.js` trong [D:\introds-arxiv-book\_config.yml](file:///d:/introds-arxiv-book/_config.yml).
   - Chuyển 2–3 biểu đồ sang `plotly.express` (tương tác zoom, hover).
   - Kiểm tra trên trình duyệt ẩn danh đảm bảo không trắng trang.
