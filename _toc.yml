@@ -11,4 +11,6 @@ parts:
 
   - caption: "Giai đoạn 2 — Bóc tách Dữ liệu"
     chapters:
-      - file: milestone2/reserved
+      - file: milestone2/01-parsing
+      - file: milestone2/02-standardization
+      - file: milestone2/03-evaluation
