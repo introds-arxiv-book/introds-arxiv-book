@@ -14,7 +14,7 @@ Tài liệu này được thiết kế để **bảo lưu toàn vẹn ngữ cả
    - Toàn bộ hạ tầng xuất bản báo cáo Jupyter Book (`introds-arxiv-book`).
    - Tổng hợp, phân tích định lượng và đối soát dữ liệu của cả 5 thành viên.
 3. **TUYỆT ĐỐI TUÂN THỦ RANH GIỚI REPO:**
-   - **Repository Code (`introds-arxiv-project`):** Không tự ý sửa code crawler/parser của thành viên khác nếu không được giao. Working tree của repo này phải luôn sạch sẽ, không commit dữ liệu rác.
+   - **Repository Code (`introds-arxiv-project`):** Không tự ý sửa code crawler/parser của thành viên khác nếu không được giao. Working tree của repo này phải luôn sạch sẽ, không commit dữ liệu rác. TUYỆT ĐỐI KHÔNG TỰ Ý `git push` LÊN REPO PROJECT NÀY — chỉ chuẩn bị commit cục bộ khi được giao và chỉ push khi người dùng ra lệnh rõ ràng.
    - **Repository Book (`introds-arxiv-book`):** Mọi công việc biên tập nội dung, đồ thị, bảng biểu, cập nhật số liệu log thực nghiệm đều diễn ra tại đây.
 
 ---
