@@ -80,9 +80,19 @@ Toàn bộ đồ án xử lý kho dữ liệu **25.000 bài báo khoa học** tr
     5. Phân loại lỗi crawl chi tiết (Phân định rạch ròi giữa 2.710 ca `pdf_only` bản chất dữ liệu và các lỗi mạng tạm thời được hồi phục 100%).
     6. Timeline request vs rate limit arXiv (Phân rã 33.64 giờ chờ pacing $\ge 3.0$s tuân thủ chính sách arXiv Etiquette).
   - Cập nhật [D:\introds-arxiv-book\_toc.yml](file:///d:/introds-arxiv-book/_toc.yml) đưa `04-deep-analysis` vào part "Giai đoạn 1 — Thu thập Dữ liệu".
-- [ ] **12/11 (Thứ 5) — VIỆC TIẾP THEO ⏳:**
-  - Cấu hình CDN `require.js` trong [D:\introds-arxiv-book\_config.yml](file:///d:/introds-arxiv-book/_config.yml).
-  - Chuyển 2–3 biểu đồ sang `plotly.express` (tương tác zoom, hover).
+- [x] **12/11 (Thứ 5) — ĐÃ XONG ✅:**
+  - Cấu hình CDN `require.js` trong [_config.yml](file:///d:/introds-arxiv-book/_config.yml) (hỗ trợ render biểu đồ tương tác Plotly trên Jupyter Book & GitHub Pages).
+- [x] **13/11 (Thứ 6) — ĐÃ XONG ✅:**
+  - Dựng sẵn khung 3 notebook Milestone 2 trong `milestone2/` có đầy đủ heading, thuyết minh và hàm nạp `load_or_placeholder`:
+    + `01-parsing.ipynb`: Thu thập đa tệp & bóc tách cây phân cấp elements.
+    + `02-standardization.ipynb`: Chuẩn hóa văn bản, công thức toán & khử trùng lặp tự động liên version.
+    + `03-evaluation.ipynb`: Bóc tách trích dẫn BibTeX, hợp nhất đa phiên bản & kiểm định trên bộ chuẩn vàng tự nhiên.
+  - Cập nhật [_toc.yml](file:///d:/introds-arxiv-book/_toc.yml) đưa 3 notebook vào Giai đoạn 2 và xóa `reserved.md`.
+  - Re-execute cả 3 notebook sạch 100% không lỗi.
+- [x] **ĐỒNG BỘ REPO CODE NHÓM (issues_week3) — ĐÃ XONG ✅:**
+  - Checkout và pull nhánh `issues_week3` mới nhất từ nhóm trưởng Đặng Ngọc Hoàng.
+  - Sửa `conftest.py` khắc phục xung đột tên module `parser` của Python < 3.10, bảo đảm 100/100 unit tests của nhóm (test_a3, test_benchmark, test_extractor, test_hierarchy, test_validator) đều PASS 100%.
+  - Đồng bộ toàn bộ `book/` cập nhật nhất vào repo code `introds-arxiv-project` và push thành công lên `origin/issues_week3` (commit `64266af`).
   - Kiểm tra trên trình duyệt ẩn danh đảm bảo không trắng trang.
 - [ ] **13/11 (Thứ 6):**
   - Khởi tạo 3 notebook cho Milestone 2 trong `introds-arxiv-book/milestone2/`:
