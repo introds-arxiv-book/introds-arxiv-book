@@ -258,3 +258,4 @@ Số lượng bài báo gán nhãn được tính theo công thức phụ thuộ
 
 #### Nhiệm vụ 3: Lưu trữ và đối soát nhật ký phiên chạy
 - Mọi lần thực thi trên Colab nên liên kết với Google Drive (`drive.mount('/content/drive')`) để lưu lại nhật ký thời gian và dữ liệu, phục vụ minh chứng tính tái lập (reproducibility) của đồ án.
+
